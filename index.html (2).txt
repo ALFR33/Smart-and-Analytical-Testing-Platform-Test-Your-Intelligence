@@ -1,0 +1,1631 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="translate" content="no" />
+  <title>HEIB12 | 20-Language Smart & Professional Assessment Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2244311957196913" crossorigin="anonymous"></script>
+  <style>
+    :root {
+      --bg-main: #0b1120;
+      --bg-card: #111827;
+      --bg-soft: #1e293b;
+      --border: #293548;
+      --text-main: #f1f5f9;
+      --text-muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-dark: #0284c7;
+      --success: #10b981;
+      --warning: #f59e0b;
+      --danger: #ef4444;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Cairo', sans-serif;
+      background: radial-gradient(circle at top, #132038 0%, var(--bg-main) 55%);
+      color: var(--text-main);
+      min-height: 100vh;
+      line-height: 1.75;
+      padding: 24px 16px 56px;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    .topbar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      background: rgba(17, 24, 39, 0.92);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 14px 20px;
+      margin-bottom: 24px;
+    }
+
+    .brand {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      font-size: 1.1rem;
+      color: var(--text-main);
+    }
+
+    .brand-logo {
+      background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+      color: #061322;
+      padding: 3px 10px;
+      border-radius: 9px;
+      font-weight: 800;
+    }
+
+    .brand-badge {
+      background: rgba(56, 189, 248, 0.14);
+      color: var(--accent);
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 700;
+    }
+
+    .top-controls {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .lang-select {
+      background: var(--bg-soft);
+      color: var(--text-main);
+      border: 1px solid var(--border);
+      padding: 7px 12px;
+      border-radius: 10px;
+      font-family: inherit;
+      font-size: 0.88rem;
+      font-weight: 700;
+      outline: none;
+      cursor: pointer;
+    }
+
+    .timer-box {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      padding: 6px 14px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: var(--accent);
+    }
+
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 28px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+      margin-bottom: 20px;
+    }
+
+    .ad-slot-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 14px;
+      margin: 20px 0;
+    }
+
+    h1 {
+      font-size: 1.65rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+      color: #ffffff;
+    }
+
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 0.96rem;
+      margin-bottom: 20px;
+    }
+
+    .track-selector {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 22px;
+    }
+
+    .track-chip {
+      background: var(--bg-soft);
+      color: var(--text-main);
+      border: 1px solid var(--border);
+      padding: 8px 14px;
+      border-radius: 12px;
+      font-family: inherit;
+      font-size: 0.86rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.18s ease;
+    }
+
+    .track-chip:hover {
+      border-color: var(--accent);
+    }
+
+    .track-chip.active {
+      background: rgba(56, 189, 248, 0.18);
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .pillars {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+
+    .pillar {
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 16px;
+    }
+
+    .pillar h3 {
+      font-size: 1rem;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+
+    .pillar p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin-bottom: 22px;
+    }
+
+    .field label {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: #e2e8f0;
+    }
+
+    .field input {
+      width: 100%;
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      color: var(--text-main);
+      padding: 11px 14px;
+      border-radius: 12px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      outline: none;
+    }
+
+    .field input:focus {
+      border-color: var(--accent);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border: none;
+      border-radius: 12px;
+      padding: 11px 20px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+      color: #061322;
+    }
+
+    .btn-success {
+      background: linear-gradient(135deg, #10b981, #059669);
+      color: #041b12;
+    }
+
+    .btn-secondary {
+      background: var(--bg-soft);
+      color: var(--text-main);
+      border: 1px solid var(--border);
+    }
+
+    .btn:disabled {
+      opacity: 0.45;
+      cursor: not-allowed;
+    }
+
+    .progress-wrap {
+      margin-bottom: 22px;
+    }
+
+    .progress-meta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+
+    .progress-bar {
+      height: 8px;
+      background: var(--bg-soft);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--accent), var(--success));
+      transition: width 0.3s ease;
+    }
+
+    .q-tag {
+      display: inline-block;
+      background: rgba(56, 189, 248, 0.12);
+      color: var(--accent);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .q-title {
+      font-size: 1.16rem;
+      font-weight: 700;
+      margin-bottom: 18px;
+      color: #ffffff;
+    }
+
+    .options {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .option-btn {
+      width: 100%;
+      text-align: inherit;
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      color: var(--text-main);
+      padding: 14px 18px;
+      border-radius: 14px;
+      font-family: inherit;
+      font-size: 0.96rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .option-btn.selected {
+      border-color: var(--accent);
+      background: rgba(56, 189, 248, 0.16);
+      box-shadow: inset 0 0 0 1px var(--accent);
+    }
+
+    .opt-key {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.06);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.85rem;
+      flex-shrink: 0;
+    }
+
+    .nav-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .celebration-banner {
+      border-radius: 16px;
+      padding: 18px 20px;
+      margin-bottom: 20px;
+      border: 1px solid rgba(16, 185, 129, 0.5);
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(56, 189, 248, 0.15));
+      animation: popIn 0.45s ease;
+    }
+
+    .excellence-banner {
+      border-radius: 16px;
+      padding: 20px 22px;
+      margin-bottom: 20px;
+      border: 1px solid rgba(245, 158, 11, 0.65);
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.22), rgba(16, 185, 129, 0.18));
+      animation: popIn 0.45s ease;
+    }
+
+    .encouragement-banner {
+      border-radius: 16px;
+      padding: 18px 20px;
+      margin-bottom: 20px;
+      border: 1px solid rgba(239, 68, 68, 0.45);
+      background: rgba(239, 68, 68, 0.12);
+    }
+
+    .celebration-title {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 6px;
+    }
+
+    .celebration-desc {
+      font-size: 0.95rem;
+      color: #e2e8f0;
+    }
+
+    @keyframes popIn {
+      0% { transform: scale(0.96); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .confetti-layer {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 998;
+    }
+
+    .confetti-piece {
+      position: absolute;
+      top: -16px;
+      width: 10px;
+      height: 16px;
+      border-radius: 2px;
+      animation: fallConfetti linear forwards;
+    }
+
+    @keyframes fallConfetti {
+      0% { transform: translateY(-20px) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(105vh) rotate(720deg); opacity: 0; }
+    }
+
+    .score-hero {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));
+      gap: 14px;
+      margin: 20px 0 24px;
+    }
+
+    .stat-box {
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 16px;
+      text-align: center;
+    }
+
+    .stat-val {
+      font-size: 1.55rem;
+      font-weight: 800;
+      color: var(--accent);
+    }
+
+    .stat-val.iq-val {
+      color: var(--success);
+    }
+
+    .stat-label {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    .detail-box {
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 18px;
+      margin-bottom: 22px;
+    }
+
+    .detail-box p {
+      color: #e2e8f0;
+      font-size: 0.94rem;
+      margin-bottom: 8px;
+    }
+
+    .detail-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    .domain-item {
+      margin-bottom: 14px;
+    }
+
+    .domain-head {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.92rem;
+      margin-bottom: 6px;
+    }
+
+    .review-card {
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 16px;
+      margin-bottom: 12px;
+    }
+
+    .badge-ok {
+      color: var(--success);
+      font-weight: 700;
+    }
+
+    .badge-bad {
+      color: var(--danger);
+      font-weight: 700;
+    }
+
+    .explanation {
+      margin-top: 8px;
+      padding-top: 8px;
+      border-top: 1px dashed var(--border);
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    .site-footer {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 20px;
+      margin-top: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .link-btn {
+      background: var(--bg-soft);
+      color: var(--text-main);
+      border: 1px solid var(--border);
+      padding: 8px 14px;
+      border-radius: 10px;
+      font-family: inherit;
+      font-size: 0.88rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .link-btn:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(2, 6, 23, 0.78);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      z-index: 999;
+    }
+
+    .modal-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      max-width: 680px;
+      width: 100%;
+      max-height: 85vh;
+      overflow-y: auto;
+      padding: 24px;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.55);
+    }
+
+    .modal-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .modal-body p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 12px;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+  </style>
+</head>
+<body class="notranslate">
+  <div class="confetti-layer hidden" id="confettiLayer"></div>
+
+  <div class="container">
+    <div class="topbar">
+      <div class="brand">
+        <span class="brand-logo">HEIB12</span>
+        <span id="uiBrandSub">منصة الاختبارات الذكية والتحليلية</span>
+        <span class="brand-badge" id="headerTrackBadge">الجامعيون والدكاترة</span>
+      </div>
+      <div class="top-controls">
+        <select class="lang-select" id="langSelect" aria-label="Language"></select>
+        <div class="timer-box">
+          <span id="uiTimerLabel">الوقت المتبقي:</span>
+          <strong id="timerText">15:00</strong>
+        </div>
+      </div>
+    </div>
+
+    <section class="card" id="introScreen">
+      <h1 id="trackTitle">اختبار الاستدلال المنطقي والتحليل العلمي — HEIB12</h1>
+      <p class="subtitle" id="trackSubtitle"></p>
+
+      <div class="track-selector" id="trackSelector"></div>
+
+      <div class="pillars" id="trackPillars"></div>
+
+      <div class="form-grid">
+        <div class="field">
+          <label for="participantName" id="uiNameLabel">الاسم أو اللقب (اختياري)</label>
+          <input type="text" id="participantName" placeholder="HEIB12" />
+        </div>
+        <div class="field">
+          <label id="uiSelectedTrackLabel">المسار المختار حالياً</label>
+          <input type="text" id="selectedTrackDisplay" readonly value="" />
+        </div>
+      </div>
+
+      <div class="nav-row">
+        <span style="color: var(--text-muted); font-size: 0.9rem;" id="trackSummaryMeta"></span>
+        <button class="btn btn-primary" id="startBtn" type="button">بدء الاختبار الآن</button>
+      </div>
+    </section>
+
+    <section class="card hidden" id="quizScreen">
+      <div class="progress-wrap">
+        <div class="progress-meta">
+          <span id="qCounter">السؤال 1 من 3</span>
+          <span id="answeredCount">تمت إجابة 0 من 3</span>
+        </div>
+        <div class="progress-bar">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+      </div>
+
+      <span class="q-tag" id="qDomain">المحور</span>
+      <h2 class="q-title" id="qText">نص السؤال</h2>
+
+      <div class="options" id="optionsContainer"></div>
+
+      <div class="nav-row">
+        <button class="btn btn-secondary" id="prevBtn" type="button">السابق</button>
+        <div style="display: flex; gap: 10px;">
+          <button class="btn btn-secondary" id="nextBtn" type="button">التالي</button>
+          <button class="btn btn-primary hidden" id="submitBtn" type="button">إنهاء وعرض النتيجة</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="card hidden" id="resultScreen">
+      <h1 id="uiResultTitle">تقرير الأداء ومؤشر الذكاء — HEIB12</h1>
+      <p class="subtitle" id="resultMeta"></p>
+
+      <div id="celebrationBox"></div>
+
+      <div class="score-hero">
+        <div class="stat-box">
+          <div class="stat-val iq-val" id="iqScoreVal">100</div>
+          <div class="stat-label" id="uiIqLabel">مؤشر الذكاء التقديري (IQ)</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-val" id="scorePercent">0%</div>
+          <div class="stat-label" id="uiAvgLabel">المعدل / النسبة المئوية</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-val" id="scoreFraction">0 / 3</div>
+          <div class="stat-label" id="uiCorrectLabel">الإجابات الصحيحة</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-val" id="gradeText">-</div>
+          <div class="stat-label" id="uiStatusLabel">حالة النجاح والتفوق</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-val" id="timeSpentText">00:00</div>
+          <div class="stat-label" id="uiTimeLabel">الزمن المستغرق</div>
+        </div>
+      </div>
+
+      <h3 style="margin-bottom: 10px; font-size: 1.1rem;" id="uiDetailHeading">تفصيل النجاح والتفوق</h3>
+      <div class="detail-box" id="successDetailBox"></div>
+
+      <h3 style="margin-bottom: 12px; font-size: 1.1rem;" id="uiDomainsHeading">الأداء التفصيلي بحسب المحاور</h3>
+      <div id="domainsBreakdown" style="margin-bottom: 24px;"></div>
+
+      <h3 style="margin-bottom: 12px; font-size: 1.1rem;" id="uiReviewHeading">مراجعة الأسئلة والإجابات والتعليلات</h3>
+      <div id="reviewContainer"></div>
+
+      <div class="nav-row" style="margin-top: 24px;">
+        <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+          <button class="btn btn-success" id="downloadReportBtn" type="button">تنزيل المعدل والتفصيل كملف</button>
+          <button class="btn btn-secondary" onclick="window.print()" type="button" id="uiPrintBtn">طباعة التقرير</button>
+        </div>
+        <button class="btn btn-primary" id="retryBtn" type="button">إعادة الاختبار / تغيير الفئة</button>
+      </div>
+    </section>
+
+    <div class="ad-slot-box">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-2244311957196913"
+           data-ad-slot="3468494682"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+
+    <div class="ad-slot-box">
+      <ins class="adsbygoogle"
+           style="display:block; text-align:center;"
+           data-ad-layout="in-article"
+           data-ad-format="fluid"
+           data-ad-client="ca-pub-2244311957196913"
+           data-ad-slot="9842331343"></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+
+    <footer class="site-footer">
+      <div>
+        <strong style="color: var(--accent);">HEIB12</strong> — <span id="uiCopyright">جميع الحقوق محفوظة © 2026</span>
+      </div>
+      <div class="footer-links">
+        <button class="link-btn" type="button" data-info="about" id="uiAboutBtn">من نحن</button>
+        <button class="link-btn" type="button" data-info="privacy" id="uiPrivacyBtn">سياسة الخصوصية</button>
+        <button class="link-btn" type="button" data-info="rights" id="uiRightsBtn">الحقوق والسياسة</button>
+      </div>
+    </footer>
+  </div>
+
+  <div class="modal-backdrop hidden" id="infoModal">
+    <div class="modal-card">
+      <div class="modal-head">
+        <h3 id="modalTitle" style="color: #ffffff; font-size: 1.2rem;">عنوان</h3>
+        <button class="btn btn-secondary" id="closeModalBtn" type="button" style="padding: 6px 14px;">إغلاق</button>
+      </div>
+      <div class="modal-body" id="modalContent"></div>
+    </div>
+  </div>
+
+  <script>
+    const LANGUAGES = {
+      ar: { name: "العربية", dir: "rtl" },
+      en: { name: "English", dir: "ltr" },
+      fr: { name: "Français", dir: "ltr" },
+      es: { name: "Español", dir: "ltr" },
+      de: { name: "Deutsch", dir: "ltr" },
+      tr: { name: "Türkçe", dir: "ltr" },
+      he: { name: "עברית", dir: "rtl" },
+      ru: { name: "Русский", dir: "ltr" },
+      pt: { name: "Português", dir: "ltr" },
+      it: { name: "Italiano", dir: "ltr" },
+      zh: { name: "中文", dir: "ltr" },
+      ja: { name: "日本語", dir: "ltr" },
+      ko: { name: "한국어", dir: "ltr" },
+      hi: { name: "हिन्दी", dir: "ltr" },
+      ur: { name: "اردو", dir: "rtl" },
+      fa: { name: "فارسی", dir: "rtl" },
+      id: { name: "Bahasa Indonesia", dir: "ltr" },
+      ms: { name: "Bahasa Melayu", dir: "ltr" },
+      nl: { name: "Nederlands", dir: "ltr" },
+      sv: { name: "Svenska", dir: "ltr" }
+    };
+
+    const UI_STRINGS = {
+      ar: {
+        brandSub: "منصة الاختبارات الذكية والتحليلية (20 لغة)",
+        timerLabel: "الوقت المتبقي:",
+        nameLabel: "الاسم أو اللقب (اختياري)",
+        selectedTrackLabel: "المسار المختار حالياً",
+        startBtn: "بدء الاختبار الآن",
+        prevBtn: "السابق",
+        nextBtn: "التالي",
+        submitBtn: "إنهاء وعرض النتيجة",
+        resultTitle: "تقرير الأداء ومؤشر الذكاء — HEIB12",
+        iqLabel: "مؤشر الذكاء التقديري (IQ)",
+        avgLabel: "المعدل / النسبة المئوية",
+        correctLabel: "الإجابات الصحيحة",
+        statusLabel: "حالة النجاح والتفوق",
+        timeLabel: "الزمن المستغرق",
+        detailHeading: "تفصيل النجاح والتفوق",
+        domainsHeading: "الأداء التفصيلي بحسب المحاور",
+        reviewHeading: "مراجعة الأسئلة والإجابات والتعليلات",
+        downloadBtn: "تنزيل المعدل والتفصيل كملف",
+        printBtn: "طباعة التقرير",
+        retryBtn: "إعادة الاختبار / تغيير الفئة",
+        copyright: "جميع الحقوق محفوظة © 2026",
+        aboutBtn: "من نحن",
+        privacyBtn: "سياسة الخصوصية",
+        rightsBtn: "الحقوق والسياسة",
+        closeBtn: "إغلاق",
+        participantDefault: "مشارك",
+        questionsWord: "أسئلة",
+        minutesWord: "دقيقة",
+        questionOf: (i, n) => `السؤال ${i} من ${n}`,
+        answeredOf: (a, n) => `تمت إجابة ${a} من ${n}`,
+        correctBadge: "صحيح",
+        wrongBadge: "غير صحيح",
+        yourAnswer: "إجابتك",
+        rightAnswer: "الإجابة الصحيحة",
+        unanswered: "لم تتم الإجابة",
+        statusExcellence: "متفوق بامتياز",
+        statusPass: "ناجح",
+        statusFail: "بحاجة لتطوير",
+        celebExcellenceTitle: (name, pct, iq) => `احتفال التفوق! ألف مبروك يا ${name}!`,
+        celebExcellenceDesc: (track, pct, iq) => `حققت تفوقاً لافتاً في مسار ${track} بمعدل ${pct}% ومؤشر ذكاء تقديري ${iq}.`,
+        celebPassTitle: (name, pct, iq) => `ألف مبروك النجاح يا ${name}!`,
+        celebPassDesc: (track, pct, iq) => `نجحت في مسار ${track} بمعدل ${pct}% ومؤشر ذكاء تقديري ${iq}.`,
+        encourageTitle: (name, pct) => `محاولة جيدة يا ${name} (${pct}%)`,
+        encourageDesc: (track) => `راجع التفاصيل والتعليلات في مسار ${track} ثم أعد المحاولة للوصول إلى النجاح والتفوق.`
+      },
+      en: {
+        brandSub: "Smart & Professional Assessment Platform (20 Languages)",
+        timerLabel: "Time Remaining:",
+        nameLabel: "Name or Title (Optional)",
+        selectedTrackLabel: "Selected Track",
+        startBtn: "Start Assessment",
+        prevBtn: "Previous",
+        nextBtn: "Next",
+        submitBtn: "Finish & View Result",
+        resultTitle: "Performance & IQ Report — HEIB12",
+        iqLabel: "Estimated IQ Index",
+        avgLabel: "Average / Score %",
+        correctLabel: "Correct Answers",
+        statusLabel: "Pass / Excellence Status",
+        timeLabel: "Time Spent",
+        detailHeading: "Pass & Excellence Breakdown",
+        domainsHeading: "Performance by Domain",
+        reviewHeading: "Question Review & Explanations",
+        downloadBtn: "Download Average & Details File",
+        printBtn: "Print Report",
+        retryBtn: "Retry / Change Track",
+        copyright: "All Rights Reserved © 2026",
+        aboutBtn: "About Us",
+        privacyBtn: "Privacy Policy",
+        rightsBtn: "Rights & Policy",
+        closeBtn: "Close",
+        participantDefault: "Participant",
+        questionsWord: "Questions",
+        minutesWord: "Minutes",
+        questionOf: (i, n) => `Question ${i} of ${n}`,
+        answeredOf: (a, n) => `Answered ${a} of ${n}`,
+        correctBadge: "Correct",
+        wrongBadge: "Incorrect",
+        yourAnswer: "Your Answer",
+        rightAnswer: "Correct Answer",
+        unanswered: "Unanswered",
+        statusExcellence: "Distinguished Excellence",
+        statusPass: "Passed",
+        statusFail: "Needs Improvement",
+        celebExcellenceTitle: (name, pct, iq) => `Excellence Celebration! Congrats ${name}!`,
+        celebExcellenceDesc: (track, pct, iq) => `Outstanding excellence in ${track} with ${pct}% average and estimated IQ ${iq}.`,
+        celebPassTitle: (name, pct, iq) => `Congratulations on Passing, ${name}!`,
+        celebPassDesc: (track, pct, iq) => `You passed ${track} with ${pct}% average and estimated IQ ${iq}.`,
+        encourageTitle: (name, pct) => `Good Effort, ${name} (${pct}%)`,
+        encourageDesc: (track) => `Review the explanations in ${track} and try again to achieve pass and excellence.`
+      }
+    };
+
+    function getUI(langCode) {
+      return UI_STRINGS[langCode] || UI_STRINGS.en;
+    }
+
+    const INFO_PAGES = {
+      about: {
+        title: "من نحن — HEIB12",
+        html: `
+          <p><strong>HEIB12</strong> منصة رقمية تعليمية ومهنية متعددة اللغات (20 لغة) تقدم اختبارات ذكاء واستدلال وتحليل متخصصة لطلاب المدارس والأطفال والجامعيين والدكاترة، إضافة إلى المحامين والمهندسين وميكانيكي السيارات والبيطريين ومحاسبي البنوك.</p>
+          <p>تتيح المنصة عرض النتائج ومؤشر الذكاء التقديري وتفاصيل النجاح والتفوق وتنزيل ملف كامل بالتقرير.</p>
+        `
+      },
+      privacy: {
+        title: "سياسة الخصوصية — HEIB12",
+        html: `
+          <p>تحترم منصة <strong>HEIB12</strong> خصوصية المستخدمين من جميع الفئات؛ إذ تتم معالجة الإجابات وحساب المعدل والتقرير محلياً داخل المتصفح، ويتم تنزيل ملف التقرير مباشرة على جهاز المستخدم عند طلبه.</p>
+          <p>قد تظهر إعلانات عبر Google AdSense وفق السياسات الإعلانية المعتمدة.</p>
+        `
+      },
+      rights: {
+        title: "الحقوق والسياسة — HEIB12",
+        html: `
+          <p>جميع حقوق تصميم المنصة وتنظيم الأسئلة والواجهة محفوظة لـ <strong>HEIB12</strong>.</p>
+          <p>يُسمح بالاستخدام التعليمي والتدريبي، ويُمنع إعادة نشر الكود أو المحتوى تجارياً دون إذن مسبق من <strong>HEIB12</strong>.</p>
+        `
+      }
+    };
+
+    const TRACKS = {
+      academic: {
+        label: "الجامعيون والدكاترة",
+        title: "مقياس الاستدلال الأكاديمي والتحليل العلمي — HEIB12",
+        subtitle: "اختبار متقدم لطلاب الجامعات والباحثين وأصحاب العلم في المنطق الصوري والمنهجية والتحليل الكمي.",
+        minutes: 15,
+        pillars: [
+          { h: "المنطق الصوري", p: "الاستلزام الشرطي ونفي القضايا." },
+          { h: "المنهجية البحثية", p: "نقد الحجج والارتباط والسببية." },
+          { h: "التحليل الكمي", p: "الاحتمالات والمتتاليات والنسب." }
+        ],
+        questions: [
+          {
+            domain: "المنطق الصوري والشرطي",
+            text: "إذا لم يُختبر النموذج تحت ضغط مرتفع فلن يُعتمد للنشر، وقد اُعتمد نموذج بالفعل؛ فماذا يترتب منطقياً؟",
+            options: ["أظهر نتائج مثالية في كل اختبار", "قد خُتبر بالفعل تحت ضغط مرتفع", "يُعتمد دائماً عند الاختبار", "لا يمكن الجزم بأي شيء"],
+            correct: 1,
+            explanation: "الاعتماد يستلزم منطقياً تحقق الشرط اللازم وهو الاختبار تحت ضغط مرتفع."
+          },
+          {
+            domain: "المنهجية ونقد الحجج",
+            text: "ما أبرز خلل منهجي عند استنتاج أن زيادة ميزانية المكتبة وحدها ترفع معدل التخرج لمجرد وجود ارتباط إحصائي؟",
+            options: ["الخلط بين الارتباط والسببية دون ضبط العوامل الأخرى", "اعتماد عينة كبيرة جداً", "استخدام مقياس نسبي", "انعدام العلاقة الإحصائية"],
+            correct: 0,
+            explanation: "وجود ارتباط لا يعني سببية حصرية بوجود عوامل أخرى مثل جودة القبول والتمويل."
+          },
+          {
+            domain: "التحليل الكمي والاحتمالي",
+            text: "صندوق به 6 أوراق محكّمة و4 غير محكّمة. سُحبت ورقتان دون إرجاع، فما احتمال أن تكونا محكّمتين؟",
+            options: ["9 / 25", "1 / 3", "2 / 5", "3 / 10"],
+            correct: 1,
+            explanation: "(6/10) × (5/9) = 30/90 = 1/3."
+          }
+        ]
+      },
+      students: {
+        label: "طلاب المدارس",
+        title: "اختبار التفكير الذكي لطلاب المدارس — HEIB12",
+        subtitle: "أسئلة ذكاء ومنطق وحساب ذهني مصممة لتنشيط مهارات التفكير لدى طلاب المدارس.",
+        minutes: 15,
+        pillars: [
+          { h: "الأنماط والأرقام", p: "اكتشاف العلاقات العددية بسهولة." },
+          { h: "الاستنتاج الذكي", p: "ربط المعطيات والوصول للحل." },
+          { h: "اللغة والمنطق", p: "دقة الفهم والمقارنة بين الكلمات." }
+        ],
+        questions: [
+          {
+            domain: "الأنماط والأرقام",
+            text: "ما العدد التالي في المتتالية: 4 ، 8 ، 16 ، 32 ، ؟ ؟",
+            options: ["48", "60", "64", "72"],
+            correct: 2,
+            explanation: "كل عدد يضاعف السابق: 32 × 2 = 64."
+          },
+          {
+            domain: "الاستنتاج الذكي",
+            text: "إذا كان مع أحمد 12 قلماً وأعطى صديقه 3 أقلام، ثم اشترى 5 أقلام جديدة، فكم قلماً أصبح معه؟",
+            options: ["10 أقلام", "14 قلماً", "12 قلماً", "16 قلماً"],
+            correct: 1,
+            explanation: "12 - 3 = 9، ثم 9 + 5 = 14 قلماً."
+          },
+          {
+            domain: "اللغة والمنطق",
+            text: "أي كلمة تختلف عن باقي الكلمات من حيث النوع؟",
+            options: ["تفاح", "موز", "جزر", "برتقال"],
+            correct: 2,
+            explanation: "التفاح والموز والبرتقال فواكه، بينما الجزر من الخضروات الجذرية."
+          }
+        ]
+      },
+      kids: {
+        label: "الأطفال",
+        title: "مغامرة الذكاء للأطفال — HEIB12",
+        subtitle: "ألغاز وأسئلة ممتعة وبسيطة للأطفال لتنمية الملاحظة وحب التفكير.",
+        minutes: 15,
+        pillars: [
+          { h: "ملاحظة الأشياء", p: "التعرف على الألوان والصفات والأشكال." },
+          { h: "عدّ ممتع", p: "أرقام بسيطة وألعاب حسابية خفيفة." },
+          { h: "تفكير لطيف", p: "مواقف يومية سهلة ومحببة." }
+        ],
+        questions: [
+          {
+            domain: "ملاحظة الأشياء",
+            text: "ما الحيوان الذي يطير في السماء وله ريش وجناحان؟",
+            options: ["القطة", "العصفور", "السمكة", "الأرنب"],
+            correct: 1,
+            explanation: "أحسنت! العصفور يملك جناحين وريشاً ويطير في السماء."
+          },
+          {
+            domain: "عدّ ممتع",
+            text: "لديك 3 تفاحات حمراء وتفاحتان صفراوان، كم تفاحة لديك معاً؟",
+            options: ["4 تفاحات", "5 تفاحات", "6 تفاحات", "3 تفاحات"],
+            correct: 1,
+            explanation: "رائع! 3 + 2 = 5 تفاحات."
+          },
+          {
+            domain: "تفكير لطيف",
+            text: "متى نفتح المظلة غالباً؟",
+            options: ["عندما تمطر السماء", "عندما ننام", "عندما نأكل المثلجات", "عندما نركب الدراجة في البيت"],
+            correct: 0,
+            explanation: "ممتاز! نفتح المظلة لتحمينا من المطر."
+          }
+        ]
+      },
+      lawyers: {
+        label: "المحامون",
+        title: "اختبار الاستدلال القانوني للمحامين — HEIB12",
+        subtitle: "تمارين تطبيقية لقياس دقة التكييف القانوني، عبء الإثبات، وتفسير النصوص والشروط.",
+        minutes: 15,
+        pillars: [
+          { h: "عبء الإثبات", p: "تحديد من يقع عليه إثبات الادعاء." },
+          { h: "تفسير الشروط", p: "فهم أثر النصوص والدفوع القانونية." },
+          { h: "المنطق القضائي", p: "الربط بين الوقائع والحكم المنطقي." }
+        ],
+        questions: [
+          {
+            domain: "عبء الإثبات",
+            text: "في أصل القواعد الإجرائية المدنية، على من يقع عبء إثبات الواقعة المدّعى بها ابتداءً؟",
+            options: ["على المدّعي الذي يتمسك بالحق أو الواقعة", "على القاضي تلقائياً", "على كاتب الجلسة", "على الشاهد الأول"],
+            correct: 0,
+            explanation: "البينة على من ادعى، ويقع عبء الإثبات على من يتمسك بالادعاء."
+          },
+          {
+            domain: "تفسير الشروط",
+            text: "إذا اشترط عقدٌ إخطاراً كتابياً قبل 30 يوماً لإنهاء الالتزام، وأُرسل الإخطار قبل 10 أيام فقط دون اتفاق لاحق، فما الأثر الأرجح؟",
+            options: ["عدم استيفاء المدة المشروطة في الإخطار", "اعتبار الإخطار سارياً بأثر رجعي تلقائياً", "سقوط العقد بالكامل من تاريخ توقيعه", "تحول العقد إلى عقد غير ملزم"],
+            correct: 0,
+            explanation: "عدم الالتزام بالمهلة التعاقدية المتفق عليها يعني عدم استيفاء شرط الإخطار المسبق."
+          },
+          {
+            domain: "المنطق القضائي",
+            text: "ما الفرق الجوهري بين القرينة القانونية والقرينة الواقعية؟",
+            options: ["القرينة القانونية يقررها النص وتُغني عن الإثبات المباشر، والواقعية يستنبطها القاضي من ظروف الدعوى", "القرينة الواقعية ملزمة دائماً ولا تقبل إثبات العكس", "لا يوجد فرق بينهما في الإثبات", "القرينة القانونية لا تُطبق إلا في الجنايات"],
+            correct: 0,
+            explanation: "القرائن القانونية مصدرها التشريع، بينما يستنبط القاضي القرائن الواقعية من ملابسات الحال."
+          }
+        ]
+      },
+      engineers: {
+        label: "المهندسون",
+        title: "اختبار التحليل الهندسي للمهندسين — HEIB12",
+        subtitle: "أسئلة تقيس الفهم الهندسي للأنظمة، الأبعاد، معامل الأمان، وتحليل الأعطال.",
+        minutes: 15,
+        pillars: [
+          { h: "الميكانيكا والأحمال", p: "فهم الإجهادات والاتزان ومعامل الأمان." },
+          { h: "الأنظمة والقياس", p: "الوحدات والدقة والمنظومات التحكمية." },
+          { h: "تشخيص الأعطال", p: "عزل السبب الجذري للأعطال الفنية." }
+        ],
+        questions: [
+          {
+            domain: "الميكانيكا والأحمال",
+            text: "ما الهدف الرئيس من إدخال معامل أمان (Factor of Safety) أكبر من 1 في التصميم الهندسي؟",
+            options: ["مواجهة الشكوك في الأحمال الفعلية وتفاوت المواد وظروف التشغيل", "زيادة وزن المنشأ دون مبرر", "إلغاء الحاجة إلى الفحص الدوري", "تقليل دقة الحسابات الإنشائية"],
+            correct: 0,
+            explanation: "معامل الأمان يغطي الفروقات المحتملة في الأحمال والخواص والظروف التشغيلية."
+          },
+          {
+            domain: "الأنظمة والقياس",
+            text: "إذا كان خطأ القياس المطلق ثابتاً بينما زادت القيمة المقاسة، فماذا يحدث للخطأ النسبي غالباً؟",
+            options: ["يقل الخطأ النسبي", "يزداد الخطأ النسبي", "يبقى مساوياً للخطأ المطلق دائماً", "يصبح صفراً تلقائياً"],
+            correct: 0,
+            explanation: "الخطأ النسبي يساوي الخطأ المطلق مقسوماً على القيمة المقاسة، فبزيادة المقام يقل الناتج."
+          },
+          {
+            domain: "تشخيص الأعطال",
+            text: "في نظام تحكم مغلق (Closed-Loop)، ما دور التغذية الراجعة (Feedback)؟",
+            options: ["مقارنة الخرج الفعلي بالقيمة المطلوبة لتصحيح الانحراف", "فصل المستشعر عن الدائرة", "زيادة الضوضاء العشوائية", "إيقاف المؤقت الزمني"],
+            correct: 0,
+            explanation: "التغذية الراجعة تقيس الأداء الفعلي وتعيده لمقارنته بالمرجع لضبط الاستقرار والدقة."
+          }
+        ]
+      },
+      mechanics: {
+        label: "ميكانيكيو السيارات",
+        title: "اختبار التشخيص الميكانيكي للسيارات — HEIB12",
+        subtitle: "أسئلة عملية وتشخيصية لميكانيكي السيارات حول المحرك، التبريد، الشحن، والفرامل.",
+        minutes: 15,
+        pillars: [
+          { h: "دورة المحرك والتبريد", p: "حرارة التشغيل، الثرموستات، وضغط التبريد." },
+          { h: "الكهرباء والشحن", p: "البطارية، الدينامو، والبادئ." },
+          { h: "التعليق والفرامل", p: "السلامة، التآكل، والاتزان." }
+        ],
+        questions: [
+          {
+            domain: "دورة المحرك والتبريد",
+            text: "إذا ارتفعت حرارة المحرك بسرعة أثناء السير بينما المبرد نظيف، فأي احتمال يستحق الفحص أولاً؟",
+            options: ["عدم فتح منظم الحرارة (الثرموستات) أو ضعف مضخة المياه", "ضغط هواء الإطار الخلفي الأيمن", "مصابيح لوحة العدادات الداخلية", "سائل غسل الزجاج الأمامي"],
+            correct: 0,
+            explanation: "تعطل الثرموستات على وضع الإغلاق أو ضعف طرمبة الماء يمنع دوران سائل التبريد بفعالية."
+          },
+          {
+            domain: "الكهرباء والشحن",
+            text: "عندما تعمل السيارة لكن البطارية تفرغ باستمرار وتضعف الإنارة، ما المكون الأكثر ترجيحاً للفحص؟",
+            options: ["مولّد الشحن (Alternator) أو سير المجموعة وتوصيلاته", "حساس حرارة المقصورة", "مفتاح زجاج الباب الخلفي", "فلتر هواء المقصورة"],
+            correct: 0,
+            explanation: "المولّد (الدينامو) مسؤول عن شحن البطارية وتغذية الأحمال الكهربائية أثناء دوران المحرك."
+          },
+          {
+            domain: "التعليق والفرامل",
+            text: "ما الذي قد يدل عليه اهتزاز عجلة القيادة بوضوح عند الضغط على المكابح على سرعات متوسطة؟",
+            options: ["اعوجاج أو عدم استواء قرص الفرامل (Brake Rotor)", "نقص سائل مسّاحات الزجاج", "انخفاض صوت البوق", "امتلاء خزان الوقود"],
+            correct: 0,
+            explanation: "عدم استواء قرص الفرامل يسبب تبايناً دورياً في الاحتكاك يظهر كنبض أو اهتزاز عند الكبح."
+          }
+        ]
+      },
+      vets: {
+        label: "البيطريون",
+        title: "اختبار العلوم البيطرية والصحة الحيوانية — HEIB12",
+        subtitle: "أسئلة موجهة للأطباء البيطريين وطلبة الطب البيطري في الفحص السريري والأمراض المشتركة والوقاية.",
+        minutes: 15,
+        pillars: [
+          { h: "الفحص السريري", p: "العلامات الحيوية والتقييم الأولي للحيوان." },
+          { h: "الأمراض والوقاية", p: "اللقاحات، الطفيليات، والأمن الحيوي." },
+          { h: "الصحة المشتركة", p: "الوقاية من انتقال العدوى بين الحيوان والإنسان." }
+        ],
+        questions: [
+          {
+            domain: "الفحص السريري",
+            text: "ما أول خطوة أساسية عند استقبال حيوان في حالة إعياء أو صدمة في العيادة البيطرية؟",
+            options: ["تقييم المسالك التنفسية والتنفس والدورة الدموية واستقرار الحالة الحيوية", "إجراء تصوير تجميلي للفراء", "تأجيل الفحص لليوم التالي دون متابعة", "تغيير نوع القفص فقط"],
+            correct: 0,
+            explanation: "تثبيت الوظائف الحيوية العاجلة (التنفس والدورة الدموية) يأتي في مقدمة التعامل مع الحالات الحرجة."
+          },
+          {
+            domain: "الأمراض والوقاية",
+            text: "ما الهدف الأساسي من تطبيق إجراءات الأمن الحيوي (Biosecurity) في المزارع؟",
+            options: ["منع دخول العوامل الممرضة وانتشارها بين الحيوانات والقطاعات", "زيادة استهلاك العلف اليومي", "تقليل عدد ساعات الإضاءة", "الاستغناء عن السجلات الصحية"],
+            correct: 0,
+            explanation: "الأمن الحيوي يعتمد على العزل والنظافة والتحكم في الحركة لمنع انتقال الأمراض."
+          },
+          {
+            domain: "الصحة المشتركة",
+            text: "لماذا يُعدّ الالتزام بمواعيد التحصين ومكافحة الطفيليات مهماً في الصحة العامة؟",
+            options: ["لأنه يحمي صحة الحيوان ويحد من انتقال بعض الأمراض المشتركة (Zoonotic)", "لأنه يغيّر لون عيون الحيوان", "لأنه يغني عن التغذية السليمة", "لأنه يُستخدم في الخيول فقط"],
+            correct: 0,
+            explanation: "الوقاية البيطرية تحافظ على صحة القطيع وتقلل مخاطر الأمراض المشتركة مع الإنسان."
+          }
+        ]
+      },
+      bankers: {
+        label: "محاسبو البنوك",
+        title: "اختبار المحاسبة المصرفية والتحليل المالي — HEIB12",
+        subtitle: "أسئلة مصممة لمحاسبي البنوك والمختصين الماليين في المطابقات، المخصصات، والرقابة الداخلية.",
+        minutes: 15,
+        pillars: [
+          { h: "المطابقات والقيود", p: "التسويات البنكية والمدين والدائن." },
+          { h: "المخاطر والمخصصات", p: "التعثر والسيولة وتقييم المخاطر." },
+          { h: "الرقابة والحوكمة", p: "الفصل بين المهام وضبط العمليات." }
+        ],
+        questions: [
+          {
+            domain: "المطابقات والقيود",
+            text: "عند إعداد مذكرة تسوية البنك، ما أثر الشيكات المسحوبة ولم تُقدَّم للصرف بعد (Outstanding Checks)؟",
+            options: ["تُخصم من رصيد كشف الحساب البنكي للوصول إلى الرصيد المعدّل", "تُضاف إلى رصيد البنك مرتين", "تُحذف من السجلات المحاسبية نهائياً", "تزيد رصيد البنك الفعلي"],
+            correct: 0,
+            explanation: "الشيكات الصادرة ولم تُصرف بعد لم يخصمها البنك بعد، لذا تُطرح من رصيد كشف البنك عند التسوية."
+          },
+          {
+            domain: "المخاطر والمخصصات",
+            text: "ما الغرض الأساسي من تكوين مخصصات الخسائر الائتمانية المتوقعة في البنوك؟",
+            options: ["الاعتراف المبكر بالخسائر المحتملة وتدعيم متانة المركز المالي", "تضخيم صافي الربح التشغيلي في الفترة الحالية", "إلغاء قيود التدقيق الداخلي", "زيادة الفوائد المستحقة تلقائياً"],
+            correct: 0,
+            explanation: "تكوين المخصصات يعكس الحذر المحاسبي ويحمي رأس المال من أثر التعثر المحتمل."
+          },
+          {
+            domain: "الرقابة والحوكمة",
+            text: "لماذا يُعدّ مبدأ الفصل بين المهام (Segregation of Duties) أساسياً في العمليات المصرفية؟",
+            options: ["لمنع انفراد شخص واحد بإتمام العملية وتسجيلها ومراجعتها مما يقلل الخطأ والاحتيال", "لتأخير تنفيذ الحوالات المالية", "لتقليل عدد الموظفين في الفروع", "لإلغاء الصلاحيات الإلكترونية"],
+            correct: 0,
+            explanation: "توزيع صلاحيات التنفيذ والتسجيل والمراجعة يعزز الرقابة الداخلية ويحد من المخاطر."
+          }
+        ]
+      }
+    };
+
+    let currentLang = "ar";
+    let currentTrackKey = "academic";
+    let currentIndex = 0;
+    let userAnswers = [];
+    let remainingSeconds = 15 * 60;
+    let timerInterval = null;
+    let lastReportText = "";
+    let lastReportFileName = "HEIB12-Report.txt";
+
+    const introScreen = document.getElementById("introScreen");
+    const quizScreen = document.getElementById("quizScreen");
+    const resultScreen = document.getElementById("resultScreen");
+    const timerText = document.getElementById("timerText");
+    const langSelect = document.getElementById("langSelect");
+    const startBtn = document.getElementById("startBtn");
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+    const submitBtn = document.getElementById("submitBtn");
+    const retryBtn = document.getElementById("retryBtn");
+    const downloadReportBtn = document.getElementById("downloadReportBtn");
+    const infoModal = document.getElementById("infoModal");
+    const modalTitle = document.getElementById("modalTitle");
+    const modalContent = document.getElementById("modalContent");
+    const closeModalBtn = document.getElementById("closeModalBtn");
+    const confettiLayer = document.getElementById("confettiLayer");
+
+    function initLanguageSelector() {
+      langSelect.innerHTML = "";
+      Object.entries(LANGUAGES).forEach(([code, meta]) => {
+        const opt = document.createElement("option");
+        opt.value = code;
+        opt.textContent = meta.name;
+        if (code === currentLang) opt.selected = true;
+        langSelect.appendChild(opt);
+      });
+    }
+
+    function applyLanguage(code) {
+      currentLang = code;
+      const meta = LANGUAGES[code] || LANGUAGES.en;
+      document.documentElement.lang = code;
+      document.documentElement.dir = meta.dir;
+
+      const u = getUI(code);
+      document.getElementById("uiBrandSub").textContent = u.brandSub;
+      document.getElementById("uiTimerLabel").textContent = u.timerLabel;
+      document.getElementById("uiNameLabel").textContent = u.nameLabel;
+      document.getElementById("uiSelectedTrackLabel").textContent = u.selectedTrackLabel;
+      startBtn.textContent = u.startBtn;
+      prevBtn.textContent = u.prevBtn;
+      nextBtn.textContent = u.nextBtn;
+      submitBtn.textContent = u.submitBtn;
+      document.getElementById("uiResultTitle").textContent = u.resultTitle;
+      document.getElementById("uiIqLabel").textContent = u.iqLabel;
+      document.getElementById("uiAvgLabel").textContent = u.avgLabel;
+      document.getElementById("uiCorrectLabel").textContent = u.correctLabel;
+      document.getElementById("uiStatusLabel").textContent = u.statusLabel;
+      document.getElementById("uiTimeLabel").textContent = u.timeLabel;
+      document.getElementById("uiDetailHeading").textContent = u.detailHeading;
+      document.getElementById("uiDomainsHeading").textContent = u.domainsHeading;
+      document.getElementById("uiReviewHeading").textContent = u.reviewHeading;
+      downloadReportBtn.textContent = u.downloadBtn;
+      document.getElementById("uiPrintBtn").textContent = u.printBtn;
+      retryBtn.textContent = u.retryBtn;
+      document.getElementById("uiCopyright").textContent = u.copyright;
+      document.getElementById("uiAboutBtn").textContent = u.aboutBtn;
+      document.getElementById("uiPrivacyBtn").textContent = u.privacyBtn;
+      document.getElementById("uiRightsBtn").textContent = u.rightsBtn;
+      closeModalBtn.textContent = u.closeBtn;
+
+      selectTrack(currentTrackKey);
+      if (!quizScreen.classList.contains("hidden")) {
+        renderQuestion();
+      }
+    }
+
+    function triggerConfetti(count = 45) {
+      confettiLayer.innerHTML = "";
+      confettiLayer.classList.remove("hidden");
+      const colors = ["#38bdf8", "#10b981", "#f59e0b", "#a855f7", "#f43f5e"];
+      for (let i = 0; i < count; i++) {
+        const piece = document.createElement("span");
+        piece.className = "confetti-piece";
+        piece.style.left = `${Math.random() * 100}%`;
+        piece.style.background = colors[i % colors.length];
+        piece.style.animationDuration = `${2.2 + Math.random() * 1.8}s`;
+        piece.style.animationDelay = `${Math.random() * 0.6}s`;
+        confettiLayer.appendChild(piece);
+      }
+      setTimeout(() => {
+        confettiLayer.classList.add("hidden");
+        confettiLayer.innerHTML = "";
+      }, 4500);
+    }
+
+    function calculateEstimatedIQ(pct, spentSec, totalSec) {
+      const safeRatio = Math.max(0.1, Math.min(1, 1 - (spentSec / Math.max(1, totalSec)) * 0.25));
+      const base = 75 + (pct / 100) * 62;
+      const speedBonus = pct >= 65 ? (safeRatio - 0.75) * 20 : 0;
+      return Math.round(Math.max(70, Math.min(148, base + speedBonus)));
+    }
+
+    function renderTrackSelector() {
+      const selector = document.getElementById("trackSelector");
+      selector.innerHTML = "";
+      Object.entries(TRACKS).forEach(([key, track]) => {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "track-chip" + (key === currentTrackKey ? " active" : "");
+        btn.textContent = track.label;
+        btn.addEventListener("click", () => selectTrack(key));
+        selector.appendChild(btn);
+      });
+    }
+
+    function selectTrack(key) {
+      currentTrackKey = key;
+      const track = TRACKS[key];
+      const u = getUI(currentLang);
+      document.getElementById("headerTrackBadge").textContent = track.label;
+      document.getElementById("trackTitle").textContent = track.title;
+      document.getElementById("trackSubtitle").textContent = track.subtitle;
+      document.getElementById("selectedTrackDisplay").value = track.label;
+      document.getElementById("trackSummaryMeta").innerHTML =
+        `${u.questionsWord}: <strong>${track.questions.length}</strong> • ${u.minutesWord}: <strong>${track.minutes}</strong>`;
+      remainingSeconds = track.minutes * 60;
+      timerText.textContent = formatTime(remainingSeconds);
+
+      const pillarsEl = document.getElementById("trackPillars");
+      pillarsEl.innerHTML = "";
+      track.pillars.forEach((p) => {
+        const div = document.createElement("div");
+        div.className = "pillar";
+        div.innerHTML = `<h3>${p.h}</h3><p>${p.p}</p>`;
+        pillarsEl.appendChild(div);
+      });
+
+      renderTrackSelector();
+    }
+
+    function formatTime(sec) {
+      const m = String(Math.floor(sec / 60)).padStart(2, "0");
+      const s = String(sec % 60).padStart(2, "0");
+      return `${m}:${s}`;
+    }
+
+    function startTimer() {
+      clearInterval(timerInterval);
+      const total = TRACKS[currentTrackKey].minutes * 60;
+      remainingSeconds = total;
+      timerText.textContent = formatTime(remainingSeconds);
+      timerInterval = setInterval(() => {
+        remainingSeconds--;
+        timerText.textContent = formatTime(Math.max(0, remainingSeconds));
+        if (remainingSeconds <= 0) {
+          clearInterval(timerInterval);
+          finishQuiz();
+        }
+      }, 1000);
+    }
+
+    function renderQuestion() {
+      const u = getUI(currentLang);
+      const questions = TRACKS[currentTrackKey].questions;
+      const q = questions[currentIndex];
+      document.getElementById("qCounter").textContent = u.questionOf(currentIndex + 1, questions.length);
+      const answered = userAnswers.filter((a) => a !== null).length;
+      document.getElementById("answeredCount").textContent = u.answeredOf(answered, questions.length);
+      document.getElementById("progressFill").style.width = `${(answered / questions.length) * 100}%`;
+
+      document.getElementById("qDomain").textContent = q.domain;
+      document.getElementById("qText").textContent = q.text;
+
+      const keys = ["أ", "ب", "ج", "د"];
+      const container = document.getElementById("optionsContainer");
+      container.innerHTML = "";
+
+      q.options.forEach((opt, idx) => {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "option-btn" + (userAnswers[currentIndex] === idx ? " selected" : "");
+        btn.innerHTML = `<span class="opt-key">${keys[idx]}</span><span>${opt}</span>`;
+        btn.addEventListener("click", () => {
+          userAnswers[currentIndex] = idx;
+          renderQuestion();
+        });
+        container.appendChild(btn);
+      });
+
+      prevBtn.disabled = currentIndex === 0;
+      const isLast = currentIndex === questions.length - 1;
+      nextBtn.classList.toggle("hidden", isLast);
+      submitBtn.classList.toggle("hidden", !isLast);
+    }
+
+    function getStatusInfo(pct) {
+      const u = getUI(currentLang);
+      if (pct >= 85) return { label: u.statusExcellence, level: "excellence" };
+      if (pct >= 65) return { label: u.statusPass, level: "pass" };
+      return { label: u.statusFail, level: "fail" };
+    }
+
+    function buildReportFileContent(data) {
+      const lines = [
+        "==================================================",
+        "HEIB12 — COMPLETE ASSESSMENT & IQ REPORT",
+        "==================================================",
+        `Date: ${new Date().toLocaleString()}`,
+        `Language: ${currentLang.toUpperCase()}`,
+        `Participant: ${data.name}`,
+        `Track: ${data.trackLabel}`,
+        `Estimated IQ: ${data.iqValue}`,
+        `Average / Score: ${data.pct}% (${data.correctCount} / ${data.total})`,
+        `Status: ${data.statusLabel}`,
+        `Time Spent: ${formatTime(data.spent)}`,
+        "",
+        "--- PERFORMANCE BY DOMAIN ---"
+      ];
+
+      Object.entries(data.domainStats).forEach(([domain, st]) => {
+        const dPct = Math.round((st.correct / st.total) * 100);
+        lines.push(`* ${domain}: ${st.correct}/${st.total} (${dPct}%)`);
+      });
+
+      lines.push("", "--- QUESTIONS & EXPLANATIONS ---");
+      const keys = ["أ", "ب", "ج", "د"];
+      data.questions.forEach((q, idx) => {
+        const chosen = data.userAnswers[idx];
+        const isCorrect = chosen === q.correct;
+        const chosenText = chosen !== null ? `${keys[chosen]} - ${q.options[chosen]}` : "Unanswered";
+        const rightText = `${keys[q.correct]} - ${q.options[q.correct]}`;
+        lines.push(`${idx + 1}. ${q.text}`);
+        lines.push(`   Result: ${isCorrect ? "CORRECT" : "INCORRECT"}`);
+        lines.push(`   User Answer: ${chosenText}`);
+        lines.push(`   Correct Answer: ${rightText}`);
+        lines.push(`   Explanation: ${q.explanation}`);
+        lines.push("");
+      });
+
+      return lines.join("\n");
+    }
+
+    function finishQuiz() {
+      clearInterval(timerInterval);
+      quizScreen.classList.add("hidden");
+      resultScreen.classList.remove("hidden");
+
+      const u = getUI(currentLang);
+      const track = TRACKS[currentTrackKey];
+      const questions = track.questions;
+      const nameInput = document.getElementById("participantName").value.trim() || u.participantDefault;
+      const totalSeconds = track.minutes * 60;
+
+      let correctCount = 0;
+      const domainStats = {};
+
+      questions.forEach((q, idx) => {
+        if (!domainStats[q.domain]) {
+          domainStats[q.domain] = { correct: 0, total: 0 };
+        }
+        domainStats[q.domain].total++;
+        if (userAnswers[idx] === q.correct) {
+          correctCount++;
+          domainStats[q.domain].correct++;
+        }
+      });
+
+      const pct = Math.round((correctCount / questions.length) * 100);
+      const spent = totalSeconds - Math.max(0, remainingSeconds);
+      const iqValue = calculateEstimatedIQ(pct, spent, totalSeconds);
+      const status = getStatusInfo(pct);
+
+      const celebrationBox = document.getElementById("celebrationBox");
+      if (status.level === "excellence") {
+        celebrationBox.innerHTML = `
+          <div class="excellence-banner">
+            <div class="celebration-title">${u.celebExcellenceTitle(nameInput, pct, iqValue)}</div>
+            <div class="celebration-desc">${u.celebExcellenceDesc(track.label, pct, iqValue)}</div>
+          </div>
+        `;
+        triggerConfetti(70);
+      } else if (status.level === "pass") {
+        celebrationBox.innerHTML = `
+          <div class="celebration-banner">
+            <div class="celebration-title">${u.celebPassTitle(nameInput, pct, iqValue)}</div>
+            <div class="celebration-desc">${u.celebPassDesc(track.label, pct, iqValue)}</div>
+          </div>
+        `;
+        triggerConfetti(42);
+      } else {
+        celebrationBox.innerHTML = `
+          <div class="encouragement-banner">
+            <div class="celebration-title">${u.encourageTitle(nameInput, pct)}</div>
+            <div class="celebration-desc">${u.encourageDesc(track.label)}</div>
+          </div>
+        `;
+      }
+
+      document.getElementById("resultMeta").textContent = `${nameInput} • ${track.label}`;
+      document.getElementById("iqScoreVal").textContent = `${iqValue}`;
+      document.getElementById("scorePercent").textContent = `${pct}%`;
+      document.getElementById("scoreFraction").textContent = `${correctCount} / ${questions.length}`;
+      document.getElementById("gradeText").textContent = status.label;
+      document.getElementById("timeSpentText").textContent = formatTime(spent);
+
+      document.getElementById("successDetailBox").innerHTML = `
+        <p><strong>${u.statusLabel}:</strong> ${status.label} (${pct}%)</p>
+        <p><strong>${u.iqLabel}:</strong> ${iqValue}</p>
+        <p><strong>${u.correctLabel}:</strong> ${correctCount} / ${questions.length}</p>
+        <p><strong>${u.timeLabel}:</strong> ${formatTime(spent)}</p>
+      `;
+
+      const domainsEl = document.getElementById("domainsBreakdown");
+      domainsEl.innerHTML = "";
+      Object.entries(domainStats).forEach(([domain, st]) => {
+        const dPct = Math.round((st.correct / st.total) * 100);
+        const div = document.createElement("div");
+        div.className = "domain-item";
+        div.innerHTML = `
+          <div class="domain-head">
+            <span>${domain}</span>
+            <strong>${st.correct} / ${st.total} (${dPct}%)</strong>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: ${dPct}%"></div>
+          </div>
+        `;
+        domainsEl.appendChild(div);
+      });
+
+      const keys = ["أ", "ب", "ج", "د"];
+      const reviewEl = document.getElementById("reviewContainer");
+      reviewEl.innerHTML = "";
+
+      questions.forEach((q, idx) => {
+        const chosen = userAnswers[idx];
+        const isCorrect = chosen === q.correct;
+        const chosenText = chosen !== null ? `${keys[chosen]} - ${q.options[chosen]}` : u.unanswered;
+        const rightText = `${keys[q.correct]} - ${q.options[q.correct]}`;
+
+        const card = document.createElement("div");
+        card.className = "review-card";
+        card.innerHTML = `
+          <div style="display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap; margin-bottom:6px;">
+            <strong>${idx + 1}. ${q.text}</strong>
+            <span class="${isCorrect ? "badge-ok" : "badge-bad"}">${isCorrect ? u.correctBadge : u.wrongBadge}</span>
+          </div>
+          <div style="font-size:0.92rem;">${u.yourAnswer}: <strong>${chosenText}</strong></div>
+          ${!isCorrect ? `<div style="font-size:0.92rem; color: var(--success);">${u.rightAnswer}: <strong>${rightText}</strong></div>` : ""}
+          <div class="explanation">${q.explanation}</div>
+        `;
+        reviewEl.appendChild(card);
+      });
+
+      const cleanSlug = nameInput.replace(/[^a-zA-Z0-9\u0600-\u06FF_-]+/g, "_") || "Participant";
+      lastReportFileName = `HEIB12_${currentTrackKey}_${cleanSlug}_${pct}pct.txt`;
+      lastReportText = buildReportFileContent({
+        name: nameInput,
+        trackLabel: track.label,
+        iqValue,
+        pct,
+        correctCount,
+        total: questions.length,
+        statusLabel: status.label,
+        spent,
+        domainStats,
+        questions,
+        userAnswers
+      });
+    }
+
+    downloadReportBtn.addEventListener("click", () => {
+      if (!lastReportText) return;
+      const blob = new Blob([lastReportText], { type: "text/plain;charset=utf-8" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = lastReportFileName;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    });
+
+    langSelect.addEventListener("change", (e) => {
+      applyLanguage(e.target.value);
+    });
+
+    document.querySelectorAll("[data-info]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const key = btn.getAttribute("data-info");
+        const page = INFO_PAGES[key];
+        if (page) {
+          modalTitle.textContent = page.title;
+          modalContent.innerHTML = page.html;
+          infoModal.classList.remove("hidden");
+        }
+      });
+    });
+
+    closeModalBtn.addEventListener("click", () => {
+      infoModal.classList.add("hidden");
+    });
+
+    infoModal.addEventListener("click", (e) => {
+      if (e.target === infoModal) {
+        infoModal.classList.add("hidden");
+      }
+    });
+
+    startBtn.addEventListener("click", () => {
+      currentIndex = 0;
+      userAnswers = Array(TRACKS[currentTrackKey].questions.length).fill(null);
+      introScreen.classList.add("hidden");
+      resultScreen.classList.add("hidden");
+      quizScreen.classList.remove("hidden");
+      startTimer();
+      renderQuestion();
+    });
+
+    prevBtn.addEventListener("click", () => {
+      if (currentIndex > 0) {
+        currentIndex--;
+        renderQuestion();
+      }
+    });
+
+    nextBtn.addEventListener("click", () => {
+      const len = TRACKS[currentTrackKey].questions.length;
+      if (currentIndex < len - 1) {
+        currentIndex++;
+        renderQuestion();
+      }
+    });
+
+    submitBtn.addEventListener("click", finishQuiz);
+
+    retryBtn.addEventListener("click", () => {
+      resultScreen.classList.add("hidden");
+      introScreen.classList.remove("hidden");
+      selectTrack(currentTrackKey);
+    });
+
+    initLanguageSelector();
+    applyLanguage("ar");
+  </script>
+</body>
+</html>
